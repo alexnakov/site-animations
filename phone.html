@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  body {
+    background-color: yellow;
+  }
+
+  #skeleton, #flashCircle1, #flashCircle2, #flashCircle3, #flashCircle4, #flashStartBtn {
+    transition: all 0.9s ease;
+  }
+
+  #skeleton {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+
+  svg:hover #skeleton {
+    transform: translateY(0);
+    animation: fadeIn 1s;
+    animation-iteration-count: 1;
+  }
+
+
+</style>
+
+<body>
+  
+  <svg width="200" height="300" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="phone">
+    <rect width="200" height="300" fill="white"/>
+    <g id="phone_2" filter="url(#filter0_ddd_111_6)">
+    <rect x="32" y="28" width="136" height="245" rx="15" fill="#F5F5F5"/>
+    </g>
+    <g id="skeleton">
+    <rect id="mediumRect3" x="123" y="78" width="26" height="13" fill="#E0E0E0"/>
+    <rect id="mediumRect2" x="87" y="78" width="32" height="13" fill="#E0E0E0"/>
+    <circle id="selfieCamera" cx="55.5" cy="49.5" r="8.5" fill="#E0E0E0"/>
+    <rect id="miniRectangle3" x="133" y="43" width="16" height="3" fill="#E0E0E0"/>
+    <rect id="miniRectangle2" x="133" y="55" width="16" height="3" fill="#E0E0E0"/>
+    <rect id="miniRectangle1" x="133" y="49" width="16" height="3" fill="#E0E0E0"/>
+    <rect id="mediumRect1" x="47" y="78" width="37" height="13" fill="#E0E0E0"/>
+    <rect id="mediumRect4" x="47" y="94" width="45" height="13" fill="#E0E0E0"/>
+    <rect id="mediumRect5" x="95" y="94" width="54" height="13" fill="#E0E0E0"/>
+    <g id="mountainPics">
+    <g id="mountainPic1">
+    <g clip-path="url(#clip0_111_6)">
+    <rect x="48" y="174" width="44" height="32" rx="5" fill="#E0E0E0"/>
+    <rect id="Rectangle 3" x="38" y="200.858" width="30.3755" height="32.6368" transform="rotate(-40.824 38 200.858)" fill="#BEBEBE"/>
+    <rect id="Rectangle 4" x="59" y="209.858" width="30.3755" height="32.6368" transform="rotate(-40.824 59 209.858)" fill="#BEBEBE"/>
+    </g>
+    </g>
+    <g id="mountainPic2">
+    <g clip-path="url(#clip1_111_6)">
+    <rect x="111" y="174" width="44" height="32" rx="5" fill="#E0E0E0"/>
+    <rect id="Rectangle 3_2" x="101" y="200.858" width="30.3755" height="32.6368" transform="rotate(-40.824 101 200.858)" fill="#BEBEBE"/>
+    <rect id="Rectangle 4_2" x="122" y="209.858" width="30.3755" height="32.6368" transform="rotate(-40.824 122 209.858)" fill="#BEBEBE"/>
+    </g>
+    </g>
+    <g id="mountainPic3">
+    <g clip-path="url(#clip2_111_6)">
+    <rect x="47" y="227" width="44" height="32" rx="5" fill="#E0E0E0"/>
+    <rect id="Rectangle 3_3" x="37" y="253.858" width="30.3755" height="32.6368" transform="rotate(-40.824 37 253.858)" fill="#BEBEBE"/>
+    <rect id="Rectangle 4_3" x="58" y="262.858" width="30.3755" height="32.6368" transform="rotate(-40.824 58 262.858)" fill="#BEBEBE"/>
+    </g>
+    </g>
+    <g id="mountainPic4">
+    <g clip-path="url(#clip3_111_6)">
+    <rect x="111" y="227" width="44" height="32" rx="5" fill="#E0E0E0"/>
+    <rect id="Rectangle 3_4" x="101" y="253.858" width="30.3755" height="32.6368" transform="rotate(-40.824 101 253.858)" fill="#BEBEBE"/>
+    <rect id="Rectangle 4_4" x="122" y="262.858" width="30.3755" height="32.6368" transform="rotate(-40.824 122 262.858)" fill="#BEBEBE"/>
+    </g>
+    </g>
+    </g>
+    <rect id="startBtn" x="66" y="124" width="69" height="23" rx="11.5" fill="#D9D9D9"/>
+    </g>
+    <g id="flashStartBtn">
+    <rect id="greenStartBtn" x="66" y="115" width="69" height="23" rx="11.5" fill="#52F162"/>
+    <path id="whiteFlash" d="M94 125.5L96.5 117H103.5L100.5 123.5H105.5L98 135.5C98.6667 132.5 100.5 125.9 100.5 125.5H94Z" fill="white" stroke="white"/>
+    </g>
+    <g id="flashCircle4">
+    <circle id="greenCircle" cx="150.5" cy="230.5" r="12.5" fill="#52F162"/>
+    <path id="whiteFlash_2" d="M145 230.5L147.5 222H154.5L151.5 228.5H156.5L149 240.5C149.667 237.5 151.5 230.9 151.5 230.5H145Z" fill="white" stroke="white"/>
+    </g>
+    <g id="flashCircle3">
+    <circle id="greenCircle_2" cx="85.5" cy="177.5" r="12.5" fill="#52F162"/>
+    <path id="whiteFlash_3" d="M80 177.5L82.5 169H89.5L86.5 175.5H91.5L84 187.5C84.6667 184.5 86.5 177.9 86.5 177.5H80Z" fill="white" stroke="white"/>
+    </g>
+    <g id="flashCircle2">
+    <circle id="greenCircle_3" cx="150.5" cy="177.5" r="12.5" fill="#52F162"/>
+    <path id="whiteFlash_4" d="M145 177.5L147.5 169H154.5L151.5 175.5H156.5L149 187.5C149.667 184.5 151.5 177.9 151.5 177.5H145Z" fill="white" stroke="white"/>
+    </g>
+    <g id="flashCircle1">
+    <circle id="greenCircle_4" cx="85.5" cy="230.5" r="12.5" fill="#52F162"/>
+    <path id="whiteFlash_5" d="M80 230.5L82.5 222H89.5L86.5 228.5H91.5L84 240.5C84.6667 237.5 86.5 230.9 86.5 230.5H80Z" fill="white" stroke="white"/>
+    </g>
+    </g>
+    <defs>
+    <filter id="filter0_ddd_111_6" x="25" y="23" width="150" height="259" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_111_6"/>
+    <feOffset dy="2"/>
+    <feGaussianBlur stdDeviation="2.5"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_111_6"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dx="0.5"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="effect1_dropShadow_111_6" result="effect2_dropShadow_111_6"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dx="-0.5"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="effect2_dropShadow_111_6" result="effect3_dropShadow_111_6"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_111_6" result="shape"/>
+    </filter>
+    <clipPath id="clip0_111_6">
+    <rect x="48" y="174" width="44" height="32" rx="5" fill="white"/>
+    </clipPath>
+    <clipPath id="clip1_111_6">
+    <rect x="111" y="174" width="44" height="32" rx="5" fill="white"/>
+    </clipPath>
+    <clipPath id="clip2_111_6">
+    <rect x="47" y="227" width="44" height="32" rx="5" fill="white"/>
+    </clipPath>
+    <clipPath id="clip3_111_6">
+    <rect x="111" y="227" width="44" height="32" rx="5" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+
+  <script>
+    
+  </script>
+</body>
+</html>
