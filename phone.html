@@ -8,28 +8,47 @@
 </head>
 
 <style>
-  @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-
   body {
     background-color: yellow;
   }
 
-  #skeleton, #flashCircle1, #flashCircle2, #flashCircle3, #flashCircle4, #flashStartBtn {
-    transition: all 0.9s ease;
+  @keyframes FadeInFromDown {
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInFromUp {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   #skeleton {
-    transform: translateY(20%);
-    opacity: 0;
+    animation: FadeInFromDown 1s ease;
+    animation-fill-mode: forwards;
   }
 
-  svg:hover #skeleton {
-    transform: translateY(0);
-    animation: fadeIn 1s;
-    animation-iteration-count: 1;
+  #flashStartBtn, #flashCircle1, #flashCircle2, #flashCircle3, #flashCircle4 {
+    animation: fadeInFromUp 1s ease 0.8s;
+    animation-fill-mode: backwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  } 
+
+  #flashCircle1, #flashCircle2, #flashCircle3, #flashCircle4 {
+    animation-delay: calc(1000ms + var(--order) * 200ms);
   }
 
 
@@ -89,19 +108,19 @@
     <rect id="greenStartBtn" x="66" y="115" width="69" height="23" rx="11.5" fill="#52F162"/>
     <path id="whiteFlash" d="M94 125.5L96.5 117H103.5L100.5 123.5H105.5L98 135.5C98.6667 132.5 100.5 125.9 100.5 125.5H94Z" fill="white" stroke="white"/>
     </g>
-    <g id="flashCircle4">
+    <g id="flashCircle4" style="--order: 4">
     <circle id="greenCircle" cx="150.5" cy="230.5" r="12.5" fill="#52F162"/>
     <path id="whiteFlash_2" d="M145 230.5L147.5 222H154.5L151.5 228.5H156.5L149 240.5C149.667 237.5 151.5 230.9 151.5 230.5H145Z" fill="white" stroke="white"/>
     </g>
-    <g id="flashCircle3">
+    <g id="flashCircle3" style="--order: 3">
     <circle id="greenCircle_2" cx="85.5" cy="177.5" r="12.5" fill="#52F162"/>
     <path id="whiteFlash_3" d="M80 177.5L82.5 169H89.5L86.5 175.5H91.5L84 187.5C84.6667 184.5 86.5 177.9 86.5 177.5H80Z" fill="white" stroke="white"/>
     </g>
-    <g id="flashCircle2">
+    <g id="flashCircle2" style="--order: 2">
     <circle id="greenCircle_3" cx="150.5" cy="177.5" r="12.5" fill="#52F162"/>
     <path id="whiteFlash_4" d="M145 177.5L147.5 169H154.5L151.5 175.5H156.5L149 187.5C149.667 184.5 151.5 177.9 151.5 177.5H145Z" fill="white" stroke="white"/>
     </g>
-    <g id="flashCircle1">
+    <g id="flashCircle1" style="--order: 1">
     <circle id="greenCircle_4" cx="85.5" cy="230.5" r="12.5" fill="#52F162"/>
     <path id="whiteFlash_5" d="M80 230.5L82.5 222H89.5L86.5 228.5H91.5L84 240.5C84.6667 237.5 86.5 230.9 86.5 230.5H80Z" fill="white" stroke="white"/>
     </g>
@@ -146,5 +165,6 @@
   <script>
     
   </script>
+
 </body>
 </html>
